@@ -10,7 +10,7 @@ echo $GENERAL_LEDGER_SETUP_HOST
 
 printenv > $CONFIG_JSON_FILE
 
-echo "------------------------------TEST-----------------------"
-echo "$CONTACTS_HOST" >> "$CONFIG_JSON_FILE"
+echo "------------------------------TEST-----------------------" >> $CONFIG_JSON_FILE
+echo "$CONTACTS_HOST" >> $CONFIG_JSON_FILE
 
 exec "$@"
