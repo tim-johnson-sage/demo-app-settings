@@ -7,6 +7,6 @@ eval $(printenv | sed -n "s/^\([^=]\+\)=\(.*\)$/export \1=\2/p" | sed 's/"/\\\"/
 echo $CONTACTS_HOST
 echo $GENERAL_LEDGER_SETUP_HOST
 
-echo "{ \"REACT_APP_CONTACTS_HOST\": \"$CONTACTS_HOST\", \"REACT_APP_GENERAL_LEDGER_HOST\": \"$GENERAL_LEDGER_SETUP_HOST\" }" > $CONFIG_JSON_FILE
+cat $CONFIG_JSON_FILE | echo "{ \"REACT_APP_CONTACTS_HOST\": \"$CONTACTS_HOST\", \"REACT_APP_GENERAL_LEDGER_HOST\": \"$GENERAL_LEDGER_SETUP_HOST\" }" > $CONFIG_JSON_FILE
 
 exec "$@"
