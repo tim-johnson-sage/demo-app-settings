@@ -40,7 +40,7 @@ resource "azurerm_app_service" "demo" {
   app_service_plan_id = azurerm_app_service_plan.demo.id
 
   site_config {
-    linux_fx_version          = "DOCKER|ghcr.io/aeliasage/demo:latest"
+    linux_fx_version          = "DOCKER|ghcr.io/tjohnsonSage/demo:latest"
     use_32_bit_worker_process = true
   }
 
